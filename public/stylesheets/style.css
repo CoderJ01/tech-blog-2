@@ -1,0 +1,127 @@
+/* CSS for homepage */
+:root {
+    --primary-color: rgb(40, 15, 1);
+    --secondary-color: rgb(176, 247, 169);
+    --mint-label: rgb(204, 255, 199);
+    --button: rgb(77, 86, 86);
+}
+
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+header {
+    height: 125px;
+    background-color: var(--primary-color);
+}
+
+header nav ul {
+    padding-top: 20px;
+    list-style: none;
+    display: flex;
+    margin-left: -35px;
+}
+
+header nav ul a {
+    margin-left: 35px;
+    text-decoration: none;
+    color: var(--mint-label);
+    font-size: 20px;
+}
+
+header h1 {
+    background-color: var(--secondary-color);;
+    width: 245px;
+    margin-top: 20px;
+    margin-left: 40px;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 4px 4px 2px rgb(213, 216, 220);
+}
+
+.blog-display {
+    border: 3px solid var(--primary-color);
+    margin-top: 20px;
+    width: 92%;
+    margin-left: 4%;
+}
+
+.b-header p {
+    margin-top: 4px;
+}
+
+.b-header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.b-header h2, .b-header p {
+    color: var(--mint-label);
+}
+
+.b-header h2, .b-header p, .b-content {
+    margin-left: 13px;
+}
+
+form {
+    margin-top: 6px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#u-name, #password, #u-name-su, #password-su, #email, #comment, #a-comment {
+    padding: 8px;
+    width: 97%;
+}
+
+#submit-comment {
+    width: 150px;
+    padding: 6px;
+    color: var(--mint-label);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+#login, #sign-up {
+    padding: 7px;
+    width: 1225px;
+    background-color: var(--button);
+    border: 1px solid var(--button);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    margin-left: -5px;
+}
+
+.b-content a {
+    text-decoration: none;
+}
+
+.new-post {
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.new-post button {
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--mint-label);
+    font-size: 20px;
+    width: 160px;
+}
+
+#n-article {
+    margin-left: 20px;
+}

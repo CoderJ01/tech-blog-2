@@ -1,0 +1,44 @@
+/* CSS for dashboard */
+#b-title, #a-title, #bb-content, #a-content, #source {
+    padding: 8px;
+    width: 97%;
+}
+
+#b-delete, #a-delete {
+    margin-top: 15px;
+}
+
+#b-create, #a-create, #b-update, #a-update, #b-delete, #a-delete {
+    padding: 7px;
+    width: 1225px;
+    background-color: var(--button);
+    border: 1px solid var(--button);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    margin-left: -5px;
+}
+
+#saved-b {
+    background-color: rgb(98, 101, 103);
+}
+
+#saved-a {
+    background-color: rgb(123, 125, 125);
+}
+
+#saved-b, #saved-a {
+    margin-top: 20px;
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 10px;
+    width: 91%;
+    margin-left: 4%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#saved h3 {
+    font-weight: normal;
+}
+

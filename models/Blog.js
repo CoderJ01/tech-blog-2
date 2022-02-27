@@ -26,7 +26,7 @@ Blog.init(
             references: {model: 'user', key: 'id'}
         },
         date: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false
         }
     },

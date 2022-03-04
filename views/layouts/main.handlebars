@@ -7,6 +7,24 @@
     </head>
     <body>
         <header>
+            {{#if loggedIn}}
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a>Dashboard</a>
+                    </li>
+                    <li>
+                        <a>Login</a>
+                    </li>
+                    <li>
+                        <a href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+            {{else}}
             <nav>
                 <ul>
                     <li>
@@ -23,6 +41,7 @@
                     </li>
                 </ul>
             </nav>
+            {{/if}}
             <h1>The Tech Blog</h1>
         </header>
         <main>

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Blog } = require('../models');
+const { User, Blog, Comment } = require('../models');
 
 router.get('/', (req, res) => {
   // provide route with access to sessions
@@ -38,8 +38,51 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/blog/:id', (req, res) => {
+  const blogId = req.params.id;
+  Blog.findOne({
+    where: {
+      id: blogId
+    },
+    include: [
+      {
+        model: Comment,
+        include: [
+          {
+            model: User
+          }
+        ]
+      },
+      {
+        model: User,
+        attributes: ['username']
+      },
+    ],
+  })
+    .then(dbBlogData => {
+      if (!dbBlogData) {
+        res.status(404).json({ message: 'No blog found with this id' });
+        return;
+      }
+
+      // serialize the data
+      const blog = dbBlogData.get({ plain: true });
+      console.log(blog);
+
+      // pass data to template
+      res.render('single-post', {
+        blog: blog
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.get('/login', (req, res) => {
   console.log(req.session.loggedIn);
+
   if (req.session.loggedIn) {
     res.redirect('/');
     return;

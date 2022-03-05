@@ -8,8 +8,18 @@
         <p>{{blog.blog_text}}</p>
         <br>
         <p>Comment<p>
-        <textarea type="text" id="comment" name="bb-content"></textarea><br>
-        <button type="button" id="submit-comment">Sumbit Comment</button><br><br>
+        {{!-- <textarea type="text" id="comment" name="bb-content"></textarea><br>
+        <button type="button" id="submit-comment">Sumbit Comment</button><br><br> --}}
+        <form class="comment-form">
+            <div>
+                <textarea name="comment-body"></textarea>
+            </div>
+
+            <div>
+                <button type="submit">add comment</button>
+                <button type="button" class="upvote-btn">upvote</button>
+            </div>
+        </form>
     </div>
 </div>
 

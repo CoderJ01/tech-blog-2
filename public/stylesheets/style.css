@@ -125,3 +125,15 @@ label {
 #n-article {
     margin-left: 20px;
 }
+
+.comments-list {
+    margin-top: 30px;
+    margin-left: 34px;
+}
+
+.meta {
+    background-color: var(--primary-color);
+    color: var(--mint-label);
+    font-weight: bold;
+    width: 1305px;
+}

@@ -47,25 +47,22 @@ router.get('/:id', (req, res) => {
 
 // create a new comment
 router.post('/', (req, res) => {
-  Comment.create({
-    text: req.body.comment_text,
-    user_id: req.body.user_id,
-    blog_id: req.body.blog_id
-  })
-  .then(dbCommentData => {
-    req.session.save(() => {
-      req.session.id = dbCommentData.id,
-      req.session.comment_text = dbCommentData.comment_text,
-      req.session.user_id = dbCommentData.user_id,
-      req.session.blog_id - dbCommentData.blog_id
-
+  if (req.session) {
+    Comment.create({
+      comment_text: req.body.comment_text,
+      blog_id: req.body.blog_id,
+      user_id: req.session.user_id,
+      date: new Date()
+    })
+    .then(dbCommentData => {
       res.json(dbCommentData);
+      console.log(dbCommentData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json;
     });
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json;
-  });
+  }
 });
 
 // update comment

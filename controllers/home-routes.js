@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
         element.current_user_id = userId;
       }
 
-      console.log(blog_data);
+      // console.log(blog_data);
 
       res.render('homepage', {
         blog_data,
@@ -63,7 +63,7 @@ router.get('/blog/:id', (req, res) => {
 
       // serialize the data
       const blog = dbBlogData.get({ plain: true });
-      console.log(blog);
+      // console.log(blog);
 
       // pass data to template
       res.render('single-post', {

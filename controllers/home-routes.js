@@ -67,7 +67,8 @@ router.get('/blog/:id', (req, res) => {
 
       // pass data to template
       res.render('single-post', {
-        blog: blog
+        blog: blog,
+        loggedIn: req.session.loggedIn
       });
     })
     .catch(err => {

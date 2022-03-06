@@ -7,6 +7,7 @@
     <div class="b-content">
         <p>{{blog.blog_text}}</p>
         <br>
+        {{#if loggedIn}}
         <p>Comment<p>
         <form class="comment-form">
             <div>
@@ -18,10 +19,13 @@
             </div>
             <br>
         </form>
+        {{/if}}
     </div>
 </div>
 
+{{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
+{{/if}}
 
 {{!-- display comments --}}
 <div class="comments-list">

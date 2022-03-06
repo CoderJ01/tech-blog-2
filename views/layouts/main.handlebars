@@ -22,6 +22,9 @@
                     <li>
                         <a id="logout" class="btn-no-style">Logout</a>
                     </li>
+                    <li>
+                        <p class="welcome">Hello, <span style="font-style: italic">{{displayName}}</span></p>
+                    </li>
                 </ul>
             </nav>
             {{else}}
@@ -48,7 +51,9 @@
             {{{body}}}
         </main>
          <script src="./javascript/login.js"></script>
+         {{#if loggedIn}}
          <script src="./javascript/logout.js"></script>
+         {{/if}}
          <script src="./javascript/comment.js"></script>
     </body>
 </html>

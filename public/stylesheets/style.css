@@ -44,6 +44,13 @@ header h1 {
     box-shadow: 4px 4px 2px rgb(213, 216, 220);
 }
 
+.welcome {
+    color: var(--mint-label);
+    margin-left: 730px;
+    margin-top: 6px;
+    position: absolute;
+}
+
 .blog-display {
     border: 3px solid var(--primary-color);
     margin-top: 20px;

@@ -7,10 +7,6 @@ async function commentFormHandler(event) {
     const blog_id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
-
-    console.log('button clicked');
-    console.log(blog_id);
-    console.log(comment_text);
   
     if (comment_text) {
       const response = await fetch('/api/comments', {

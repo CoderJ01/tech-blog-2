@@ -1,4 +1,4 @@
-{{!-- create new blog  --}}
+{{!-- create new blog --}}
 <div class="blog-display">
     <div class="b-header">
         <h2>Create New Blog</h2>
@@ -14,5 +14,15 @@
         <br>
     </div>
 </div>
+
+{{!-- display existing blog --}}
+{{#if userBlog.length}}
+    {{#each userBlog as |blog|}}
+        <div id="saved-b">
+            <h3><a href="/blog/{{blog.id}}">{{blog.blog_title}}</a></h3>
+            <p>Blog posted on {{blog.date}}</p>
+        </div>
+    {{/each}}
+{{/if}}
 
  

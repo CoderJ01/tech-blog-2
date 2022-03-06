@@ -1,13 +1,13 @@
 {{!-- display blogs --}}
 {{#each blog_data as |blog|}}
-<div class="blog-display">
-    <div class="b-header">
-        <h2><a>{{blog.blog_title}}</a></h2>
-        <p>Blog posted by {{user.username}} on {{date}}</p>
+    <div class="blog-display">
+        <div class="b-header">
+            <h2><a href="/blog/{{blog.id}}">{{blog.blog_title}}</a></h2>
+            <p>Blog posted by {{user.username}} on {{date}}</p>
+        </div>
+        <div class="b-content">
+            <p>{{blog.blog_text}}</p>
+            <br>
+        </div>
     </div>
-    <div class="b-content">
-        <p>{{blog.blog_text}}</p>
-        <br>
-    </div>
-</div>
 {{/each}}

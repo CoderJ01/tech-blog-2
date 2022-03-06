@@ -4,46 +4,47 @@
         <meta charset="UTF-8" />
         <title href="/">The Tech Blog</title>
         <link rel="stylesheet" href="/stylesheets/style.css" />
+        <link rel="stylesheet" href="/stylesheets/secondary-style.css" />
     </head>
     <body>
         <header>
             {{#if loggedIn}}
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/dashboard">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="/login">Login</a>
-                    </li>
-                    <li>
-                        <a id="logout" class="btn-no-style">Logout</a>
-                    </li>
-                    <li>
-                        <p class="welcome">Hello, <span style="font-style: italic">{{displayName}}</span></p>
-                    </li>
-                </ul>
-            </nav>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/dashboard">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="/login">Login</a>
+                        </li>
+                        <li>
+                            <a id="logout" class="btn-no-style">Logout</a>
+                        </li>
+                        <li>
+                            <p class="welcome">Hello, <span style="font-style: italic">{{displayName}}</span></p>
+                        </li>
+                    </ul>
+                </nav>
             {{else}}
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a>Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="/login">Login</a>
-                    </li>
-                    <li>
-                         <a id="logout" class="btn-no-style">Logout</a>
-                    </li>
-                </ul>
-            </nav>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a>Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="/login">Login</a>
+                        </li>
+                        <li>
+                            <a id="logout" class="btn-no-style">Logout</a>
+                        </li>
+                    </ul>
+                </nav>
             {{/if}}
             <h1>The Tech Blog</h1>
         </header>
@@ -52,7 +53,7 @@
         </main>
          <script src="./javascript/login.js"></script>
          {{#if loggedIn}}
-         <script src="./javascript/logout.js"></script>
+            <script src="./javascript/logout.js"></script>
          {{/if}}
          <script src="./javascript/comment.js"></script>
     </body>

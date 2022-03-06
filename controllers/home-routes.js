@@ -23,8 +23,16 @@ router.get('/', (req, res) => {
         element.current_user_id = userId;
       }
 
-      let name = JSON.stringify(req.session.username);
-      const onlyName = name.replace(/["]+/g, '');
+      var onlyName;
+      var userName;
+
+      if (req.session.username) {
+        userName = JSON.stringify(req.session.username);
+        onlyName = userName.replace(/["]+/g, '');
+      }
+      else {
+        onlyName = '';
+      }
 
       res.render('homepage', {
         blog_data,

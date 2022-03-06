@@ -85,7 +85,7 @@ label {
     color: var(--primary-color);
 }
 
-#u-name, #password, #u-name-su, #password-su, #email, #comment, #a-comment {
+#u-name, #password, #u-name-su, #password-su, #email, #comment, #bb-content, #b-title {
     padding: 8px;
     width: 97%;
 }
@@ -119,7 +119,7 @@ label {
     margin-top: 4px;
 }
 
-.new-post button {
+#n-blog {
     padding: 10px;
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);

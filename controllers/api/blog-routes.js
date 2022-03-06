@@ -51,11 +51,11 @@ router.post('/', (req, res) => {
       date: new Date()
     })
     .then(dbBlogData => {
-      if (!dbBlogData) {
-        console.log('The data is not being retrieved!');
-      }
+      // if (!dbBlogData) {
+      //   console.log('The data is not being retrieved!');
+      // }
       res.json(dbBlogData);
-      console.log(dbBlogData)
+      // console.log(dbBlogData)
     })
     .catch(err => {
       console.log(err);

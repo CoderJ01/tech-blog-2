@@ -22,10 +22,8 @@ async function newFormHandler(event) {
         
           if (response.ok) {
             document.location.replace('/dashboard');
-            console.log('response.ok');
           } else {
             alert(response.statusText);
-            console.log('response.NOT');
           }
     }
 }

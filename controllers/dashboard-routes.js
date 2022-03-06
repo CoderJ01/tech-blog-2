@@ -17,7 +17,6 @@ router.get('/', (req, res) => {
       .then(dbBlogData => {
         // serialize data before passing to template
         const userBlog = dbBlogData.map(blog => blog.get({ plain: true }));
-        console.log(userBlog);
         res.render('dashboard', { 
             userBlog, 
             loggedIn: true 

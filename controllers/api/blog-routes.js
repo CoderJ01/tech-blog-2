@@ -43,25 +43,26 @@ router.get('/:id', (req, res) => {
 
 // create a new blog
 router.post('/', (req, res) => {
-  Blog.create({
-    title: req.body.blog_title,
-    text: req.body.blog_text,
-    user_id: req.body.user_id
-  })
-  .then(dbBlogData => {
-    req.session.save(() => {
-      req.session.id = dbBlogData.id,
-      req.session.blog_title = dbBlogData.blog_title,
-      req.session.blog_text = dbBlogData.blog_text,
-      req.session.user_id = dbBlogData.user_id
-
+  if (req.session) {
+    Blog.create({
+      blog_title: req.body.blog_title,
+      blog_text: req.body.blog_text,
+      user_id: req.body.user_id,
+      date: new Date()
+    })
+    .then(dbBlogData => {
+      if (!dbBlogData) {
+        console.log('The data is not being retrieved!');
+      }
       res.json(dbBlogData);
+      console.log(dbBlogData)
+    })
+    .catch(err => {
+      console.log(err);
+      console.log('ERROR');
+      res.status(500).json;
     });
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json;
-  });
+  }
 });
 
 // update blog

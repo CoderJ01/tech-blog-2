@@ -56,7 +56,6 @@ router.post('/', (req, res) => {
     })
     .then(dbCommentData => {
       res.json(dbCommentData);
-      console.log(dbCommentData);
     })
     .catch(err => {
       console.log(err);

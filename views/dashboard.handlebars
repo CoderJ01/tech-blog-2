@@ -4,16 +4,18 @@
         <h2>Create New Blog</h2>
     </div>
     <div class="b-content">
-        <form action="/action_page.php">
+        <form class="new-blog-form">
             <label for="title">Title</label><br>
             <input type="text" id="b-title" name="b-title"><br><br>
             <label for="content">Content</label><br>
             <textarea type="text" id="bb-content" name="bb-content"></textarea><br><br>
-            <button type="button" id="n-blog">+ New Blog</button>
+            <button type="submit" id="n-blog">+ New Blog</button>
         </form>
         <br>
     </div>
 </div>
+
+<script src="/javascript/add-post.js"></script>
 
 {{!-- display existing blog --}}
 {{#if userBlog.length}}
@@ -24,5 +26,6 @@
         </div>
     {{/each}}
 {{/if}}
+
 
  

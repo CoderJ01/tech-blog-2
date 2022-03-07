@@ -81,6 +81,7 @@ router.put('/:id', (req, res) => {
   })
   .catch(err => {
     console.log(err);
+    console.log('ERROR');
     res.status(500).json(err);
   });
 });

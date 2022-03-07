@@ -4,11 +4,11 @@
         <h2>Edit Blog</h2>
     </div>
     <div class="b-content">
-        <form action="/action_page.php">
+        <form class="edit-post-from">
             <label for="title">Title</label><br>
-            <input type="text" id="b-title" name="edit-b-title"><br><br>
+            <input type="text" id="b-title" name="edit-b-title" value="{{editBlog.blog_title}}"><br><br>
             <label for="content">Content</label><br>
-            <textarea type="text" id="bb-content" name="edit-bb-content"></textarea><br><br>
+            <textarea type="text" id="bb-content" name="edit-bb-content">{{editBlog.blog_text}}</textarea><br><br>
             <input type="submit" id="b-update" value="Update Blog">
             <input type="submit" id="b-delete" value="Delete">
         </form>
@@ -16,4 +16,4 @@
     </div>
 </div>
 
-<script src="./javascript/edit-post.js"></script>
+<script src="/javascript/edit-post.js"></script>

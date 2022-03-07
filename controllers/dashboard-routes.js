@@ -19,7 +19,7 @@ router.get('/', withAuth, (req, res) => {
       .then(dbBlogData => {
         // serialize data before passing to template
         const userBlog = dbBlogData.map(blog => blog.get({ plain: true }));
-        console.log(userBlog)
+        // console.log(userBlog)
         res.render('dashboard', { 
             userBlog, 
             loggedIn: true 
@@ -50,6 +50,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     .then(dbBlogData => {
       if (dbBlogData) {
         const editBlog = dbBlogData.get({ plain: true });
+        console.log(editBlog);
         
       res.render('edit-post', {
           editBlog,

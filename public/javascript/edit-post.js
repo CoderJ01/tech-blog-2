@@ -9,7 +9,7 @@ async function editFormHandler(event) {
 
     console.log('This button works');
     console.log(title);
-    console.loh(id);
+    console.log(id);
     console.log(content);
 
     if (title && content && id) {
@@ -25,7 +25,7 @@ async function editFormHandler(event) {
         });
     
         if (response.ok) {
-            document.location.replace('/dashboard/');
+            document.location.replace('/dashboard');
         } 
         else {
             alert(response.statusText);

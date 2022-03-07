@@ -19,7 +19,11 @@
 {{#if userBlog.length}}
     {{#each userBlog as |blog|}}
         <div id="saved-b">
-            <h3><a href="/blog/{{blog.id}}">{{blog.blog_title}}</a></h3>
+            <div>
+                <h3>{{blog.blog_title}}</h3>
+                <a href="/blog/{{blog.id}}">Add Comment</a>
+                <a href="" style="margin-left: 5px">Edit Post</a>
+            </div>
             <p>Blog posted on {{blog.date}}</p>
         </div>
     {{/each}}

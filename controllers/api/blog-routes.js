@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Blog, Comment} = require('../../models');
+const { User, Blog, Comment } = require('../../models');
 
 // find all blogs
 router.get('/', (req, res) => {
@@ -44,10 +44,11 @@ router.get('/:id', (req, res) => {
 // create a new blog
 router.post('/', (req, res) => {
   if (req.session) {
+    console.log(req.body.blog_title); //undefined
     Blog.create({
       blog_title: req.body.blog_title,
       blog_text: req.body.blog_text,
-      user_id: req.body.user_id,
+      user_id: req.session.user_id,
       date: new Date()
     })
     .then(dbBlogData => {
@@ -55,7 +56,7 @@ router.post('/', (req, res) => {
       //   console.log('The data is not being retrieved!');
       // }
       res.json(dbBlogData);
-      // console.log(dbBlogData)
+      //console.log(dbBlogData)
     })
     .catch(err => {
       console.log(err);

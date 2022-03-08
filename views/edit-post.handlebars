@@ -4,12 +4,12 @@
         <h2>Edit Blog</h2>
     </div>
     <div class="b-content">
-        <form class="edit-post-from">
+        <form class="edit-post-form">
             <label for="title">Title</label><br>
-            <input type="text" id="b-title" name="edit-b-title" value="{{editBlog.blog_title}}"><br><br>
+            <input type="text" id="b-title" name="b-title" value="{{editBlog.blog_title}}"><br><br>
             <label for="content">Content</label><br>
-            <textarea type="text" id="bb-content" name="edit-bb-content">{{editBlog.blog_text}}</textarea><br><br>
-            <input type="submit" id="b-update" value="Update Blog">
+            <textarea type="text" id="bb-content" name="bb-content">{{editBlog.blog_text}}</textarea><br><br>
+            <button type="submit" id="b-update">Update Blog</button>
             {{!-- <input type="submit" id="b-delete" value="Delete"> --}}
         </form>
         <br>

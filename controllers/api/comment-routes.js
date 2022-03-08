@@ -48,6 +48,7 @@ router.get('/:id', (req, res) => {
 // create a new comment
 router.post('/', (req, res) => {
   if (req.session) {
+    console.log(req.body.comment_text); // gives a value
     Comment.create({
       comment_text: req.body.comment_text,
       blog_id: req.body.blog_id,
@@ -56,6 +57,7 @@ router.post('/', (req, res) => {
     })
     .then(dbCommentData => {
       res.json(dbCommentData);
+      console.log(dbCommentData);
     })
     .catch(err => {
       console.log(err);

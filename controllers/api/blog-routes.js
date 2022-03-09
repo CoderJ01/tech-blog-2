@@ -79,6 +79,7 @@ router.put('/:id', (req, res) => {
       res.status(404).json({ message: 'No blog found with this id' });
       return;
     }
+    res.redirect('/dashboard');
   })
   .catch(err => {
     console.log(err);

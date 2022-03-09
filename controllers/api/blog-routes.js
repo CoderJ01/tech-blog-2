@@ -3,7 +3,6 @@ const { User, Blog, Comment } = require('../../models');
 
 // find all blogs
 router.get('/', (req, res) => {
-  console.log('===========================');
   Blog.findAll({
     attributes: { exclude: ['password'] }
   })
@@ -52,11 +51,7 @@ router.post('/', (req, res) => {
       date: new Date()
     })
     .then(dbBlogData => {
-      // if (!dbBlogData) {
-      //   console.log('The data is not being retrieved!');
-      // }
       res.json(dbBlogData);
-      //console.log(dbBlogData)
     })
     .catch(err => {
       console.log(err);
@@ -68,8 +63,12 @@ router.post('/', (req, res) => {
 
 // update blog
 router.put('/:id', (req, res) => {
-  Blog.update(req.body, {
-    individualHooks: true,
+  Blog.update(
+  {
+    blog_title: req.body.blog_title,
+    blog_text: req.body.blog_text
+  },
+  {
     where: {
       id: req.params.id
     }

@@ -50,6 +50,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     .then(dbBlogData => {
       if (dbBlogData) {
         const editBlog = dbBlogData.get({ plain: true });
+        console.log('============= dashboard-routes.js=======================');
         console.log(editBlog);
         
       res.render('edit-post', {

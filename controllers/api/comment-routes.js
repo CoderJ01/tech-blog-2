@@ -3,7 +3,6 @@ const { User, Blog, Comment } = require('../../models');
 
 // find all comments
 router.get('/', (req, res) => {
-  console.log('===========================');
   Comment.findAll({
     attributes: { exclude: ['password'] }
   })
@@ -57,7 +56,6 @@ router.post('/', (req, res) => {
     })
     .then(dbCommentData => {
       res.json(dbCommentData);
-      console.log(dbCommentData);
     })
     .catch(err => {
       console.log(err);

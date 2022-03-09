@@ -100,7 +100,9 @@ router.delete('/:id', (req, res) => {
       res.status(404).json({ message: 'No blog found with this id' });
       return;
     }
-    res.json(dbBlogData);
+    res.json(dbBlogData => {
+      res.redirect('/dashboard');
+    });
   })
   .catch(err => {
     console.log(err);

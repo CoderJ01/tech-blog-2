@@ -1,26 +1,24 @@
 async function newFormHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('input[name="b-title"]').value.trim();
-    const blog_content = document.querySelector('textarea[name="bb-content"]').value.trim();
+    const blog_title = document.querySelector('input[name="b-title"]').value.trim();
+    const blog_text = document.querySelector('textarea[name="bb-content"]').value.trim();
 
     console.log('This button works');
-    console.log(title);
-    console.log(blog_content);
+    console.log(blog_title);
+    console.log(blog_text);
 
-    if (title && blog_content) {
+    if (blog_title && blog_text) {
         const response = await fetch('/api/blogs', {
             method: 'POST',
             body: JSON.stringify({
-              title,
-              blog_content
+              blog_title,
+              blog_text
             }),
             headers: {
               'Content-Type': 'application/json'
             }
           });
-
-          console.log("Response:" + response);
         
           if (response.ok) {
             document.location.replace('/dashboard');

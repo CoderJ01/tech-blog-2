@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Blog, Comment } = require('../models');
+const greetUserInHeader = require('../utils/greetings');
 
 router.get('/', (req, res) => {
   // provide route with access to sessions
@@ -25,7 +26,7 @@ router.get('/', (req, res) => {
 
       var onlyName;
       var userName;
-
+      
       if (req.session.username) {
         userName = JSON.stringify(req.session.username);
         onlyName = userName.replace(/["]+/g, '');

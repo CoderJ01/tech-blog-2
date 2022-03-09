@@ -19,10 +19,22 @@ router.get('/', withAuth, (req, res) => {
       .then(dbBlogData => {
         // serialize data before passing to template
         const userBlog = dbBlogData.map(blog => blog.get({ plain: true }));
-        // console.log(userBlog)
+
+        var onlyName;
+        var userName;
+        
+        if (req.session.username) {
+          userName = JSON.stringify(req.session.username);
+          onlyName = userName.replace(/["]+/g, '');
+        }
+        else {
+          onlyName = '';
+        }
+
         res.render('dashboard', { 
             userBlog, 
-            loggedIn: true 
+            loggedIn: true,
+            displayName: onlyName 
         });
       })
       .catch(err => {
@@ -51,11 +63,22 @@ router.get('/edit/:id', withAuth, (req, res) => {
       if (dbBlogData) {
         const editBlog = dbBlogData.get({ plain: true });
         console.log('============= dashboard-routes.js=======================');
-        console.log(editBlog);
+
+      var onlyName;
+      var userName;
+      
+      if (req.session.username) {
+        userName = JSON.stringify(req.session.username);
+        onlyName = userName.replace(/["]+/g, '');
+      }
+      else {
+        onlyName = '';
+      }
         
       res.render('edit-post', {
           editBlog,
           loggedIn: true,
+          displayName: onlyName
         });
       } 
       else {

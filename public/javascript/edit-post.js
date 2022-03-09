@@ -1,23 +1,23 @@
 async function editFormHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('input[name="b-title"]').value.trim();
-    const content = document.querySelector('textarea[name="bb-content"]').value.trim();
+    const blog_title = document.querySelector('input[name="b-title"]').value.trim();
+    const blog_text = document.querySelector('textarea[name="bb-content"]').value.trim();
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
 
     console.log('This button works');
-    console.log(title);
+    console.log(blog_title);
     console.log(id);
-    console.log(content);
+    console.log(blog_text);
 
-    if (title && content) {
+    if (blog_title && blog_text) {
         const response = await fetch(`/api/blogs/${id}`, {
             method: 'PUT',
             body: JSON.stringify({
-                title,
-                content
+                blog_title,
+                blog_text
             }),
             headers: {
                 'Content-Type': 'application/json'

@@ -9,39 +9,41 @@
     </head>
     <body>
         <header>
+            <div class="header-wrapper">
             {{#if loggedIn}}
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/dashboard">Dashboard</a>
-                    </li>
-                    <li>
-                        <a id="logout" class="btn-no-style">Logout</a>
-                    </li>
-                    <li>
-                        <p class="welcome">Hello, <span style="font-style: italic">{{displayName}}</span></p>
-                    </li>
-                </ul>
-            </nav>
-            {{else}}
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a>Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="/login">Login</a>
-                    </li>
-                </ul>
-            </nav>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/dashboard">Dashboard</a>
+                        </li>
+                        <li>
+                            <a id="logout" class="btn-no-style">Logout</a>
+                        </li>
+                        <li>
+                            <p class="welcome">Hello, <span style="font-style: italic">{{displayName}}</span></p>
+                        </li>
+                    </ul>
+                </nav>
+                {{else}}
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a>Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="/login">Login</a>
+                        </li>
+                    </ul>
+                </nav>
             {{/if}}
             <h1>The Tech Blog</h1>
+            </div>
         </header>
         <main>
             {{{body}}}

@@ -37,7 +37,7 @@ router.get('/', (req, res) => {
       res.render('homepage', {
         blog_data,
         loggedIn: req.session.loggedIn,
-        displayName: onlyName
+        displayName: onlyName // display logged in user's username 
       });
     })
     .catch(err => {
@@ -48,6 +48,7 @@ router.get('/', (req, res) => {
 
 router.get('/blog/:id', (req, res) => {
   const blogId = req.params.id;
+  // render a single blog onto the dashboard when user decides to edit said blog
   Blog.findOne({
     where: {
       id: blogId
@@ -84,8 +85,9 @@ router.get('/blog/:id', (req, res) => {
     });
 });
 
+// render the login page
 router.get('/login', (req, res) => {
-
+  // if user is already logged in, then redirect user to homepage
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
@@ -93,8 +95,8 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// render signup page
 router.get('/register', (req, res) => {
-
   if (req.session.loggedIn) {
     res.redirect('/');
     return;

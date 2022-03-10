@@ -1,3 +1,4 @@
+// allow user to login
 async function loginFormHandler(event) {
   event.preventDefault();
 

@@ -1,3 +1,4 @@
+// allow user to add blog post
 async function newFormHandler(event) {
     event.preventDefault();
   

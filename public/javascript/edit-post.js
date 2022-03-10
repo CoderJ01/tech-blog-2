@@ -1,3 +1,4 @@
+// allow user to update blog
 async function editFormHandler(event) {
     event.preventDefault();
   

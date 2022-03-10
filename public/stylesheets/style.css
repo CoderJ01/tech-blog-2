@@ -156,3 +156,132 @@ label {
     font-weight: bold;
     width: 1305px;
 }
+
+/* iPad Pro  */
+@media screen and (max-width: 1024px) {
+
+    header {
+        height: 255px;
+    }
+
+    header nav ul {
+        margin-left: 180px;
+    }
+
+    header nav ul a {
+        font-size: 40px;
+    }
+
+    header h1 {
+        font-size: 65px;
+        width: 550px;
+        margin-left: 226px;
+    }
+
+    .welcome {
+        margin-left: -500px; 
+        margin-top: 160px;
+        width: 500px;
+        font-size: 40px;
+        position: absolute;
+        text-align: center;
+    }
+
+    .blog-display {
+        margin-top: 35px;
+    }
+
+    .b-header {
+        display: block;
+    }
+
+    .b-header a {
+        font-size: 50px;
+        text-decoration: none;
+        border-bottom: 2px solid var(--mint-label);
+    }
+
+    .b-header p {
+        font-size: 35px;
+        margin-top: 8px;
+    }
+
+    .b-content p {
+        margin-top: 12px;
+        font-size: 35px;
+    }
+}
+
+/* iPad  */
+@media screen and (max-width: 768px) {
+    
+    .header-wrapper {
+        margin-left: -120px;
+    }
+}
+
+/* iPhone 6/7/8 Plus*/
+@media screen and (max-width: 414px) {
+
+    header {
+        width: 600px;
+    }
+
+    .header-wrapper {
+        margin-left: -205px;
+    }
+
+    .blog-display {
+        width: 552px;
+    }
+
+    .b-header a {
+        font-size: 40px;
+    }
+
+    .b-header p {
+        font-size: 30px;
+    }
+
+    .b-content p {
+        font-size: 30px;
+    }
+}
+
+/* iPhone 12 Pro */
+@media screen and (max-width: 390px) {
+
+    header {
+        height: 200px;
+    }
+
+    header nav ul {
+        margin-left: 233px;
+    }
+
+    header nav ul a {
+        font-size: 30px;
+    }
+
+    header h1 {
+        font-size: 46px;
+    }
+
+    .welcome {
+        font-size: 30px;
+        margin-left: -447px;
+        margin-top: 130px;
+    }
+
+    .b-header a {
+        font-size: 35px;
+    }
+
+    .b-header p {
+        font-size: 25px;
+    }
+
+    .b-content p {
+        font-size: 25px;
+    }
+}

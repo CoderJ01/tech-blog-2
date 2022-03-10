@@ -3,7 +3,6 @@ const { User } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
-    console.log('===========================');
     User.findAll({
         attributes: { exclude: ['password'] }
     })
@@ -73,7 +72,6 @@ router.post('/login', (req, res) => {
         }
 
         const validPassword = dbUserData.checkPassword(req.body.password);
-        console.log(validPassword);
 
         if (!validPassword) {
             res.status(400).json({ message: 'Incorrect password! '});

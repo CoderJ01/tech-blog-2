@@ -1,8 +1,6 @@
 // allow user to delete blogs
 async function deleteBlogFormHandler(event) {
     event.preventDefault();
-
-    console.log('Delete button works');
   
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1

@@ -62,7 +62,6 @@ router.get('/edit/:id', withAuth, (req, res) => {
     .then(dbBlogData => {
       if (dbBlogData) {
         const editBlog = dbBlogData.get({ plain: true });
-        console.log('============= dashboard-routes.js=======================');
 
       var onlyName;
       var userName;
@@ -82,12 +81,10 @@ router.get('/edit/:id', withAuth, (req, res) => {
         });
       } 
       else {
-        console.log('404');
         res.status(404).end();
       }
     })
     .catch(err => {
-      console.log('500');
       res.status(500).json(err);
     });
 });

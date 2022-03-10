@@ -7,11 +7,6 @@ async function editFormHandler(event) {
       window.location.toString().split('/').length - 1
     ];
 
-    console.log('This button works');
-    console.log(blog_title);
-    console.log(id);
-    console.log(blog_text);
-
     if (blog_title && blog_text) {
         const response = await fetch(`/api/blogs/${id}`, {
             method: 'PUT',

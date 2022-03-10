@@ -6,7 +6,6 @@ router.get('/', (req, res) => {
   // provide route with access to sessions
   const userId = req.session.user_id;
 
-  console.log('===========================');
   // render existing blogs onto homepage
     Blog.findAll({
       include: {

@@ -1,14 +1,18 @@
 /* CSS for dashboard */
-#b-title, #a-title, #bb-content, #a-content, #source {
+#b-title,  
+#bb-content, 
+#source {
     padding: 8px;
     width: 97%;
 }
 
-#b-delete, #a-delete {
+#b-delete {
     margin-top: 15px;
 }
 
-#b-create, #a-create, #b-update, #a-update, #b-delete, #a-delete {
+#b-create, 
+#b-update, 
+#b-delete {
     padding: 7px;
     width: 1225px;
     background-color: var(--button);
@@ -26,7 +30,7 @@
     background-color: rgb(123, 125, 125);
 }
 
-#saved-b, #saved-a {
+#saved-b {
     margin-top: 20px;
     color:rgb(255, 255, 255);
     font-size: 15px;

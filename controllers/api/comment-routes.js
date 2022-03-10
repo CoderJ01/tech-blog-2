@@ -47,7 +47,6 @@ router.get('/:id', (req, res) => {
 // create a new comment
 router.post('/', (req, res) => {
   if (req.session) {
-    console.log(req.body.comment_text); // gives a value
     Comment.create({
       comment_text: req.body.comment_text,
       blog_id: req.body.blog_id,

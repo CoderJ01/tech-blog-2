@@ -43,8 +43,6 @@ router.get('/:id', (req, res) => {
 // create a new blog
 router.post('/', (req, res) => {
   if (req.session) {
-    console.log(req.body.blog_title); //undefined
-    console.log(req.session.user_id);
     Blog.create({
       blog_title: req.body.blog_title,
       blog_text: req.body.blog_text,
@@ -56,7 +54,6 @@ router.post('/', (req, res) => {
     })
     .catch(err => {
       console.log(err);
-      console.log('ERROR');
       res.status(500).json;
     });
   }
@@ -83,7 +80,6 @@ router.put('/:id', (req, res) => {
   })
   .catch(err => {
     console.log(err);
-    console.log('ERROR');
     res.status(500).json(err);
   });
 });

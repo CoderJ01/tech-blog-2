@@ -68,11 +68,15 @@ header h1 {
     justify-content: space-between;
 }
 
-.b-header h2, .b-header p, .b-header a {
+.b-header h2, 
+.b-header p, 
+.b-header a {
     color: var(--mint-label);
 }
 
-.b-header h2, .b-header p, .b-content {
+.b-header h2, 
+.b-header p, 
+.b-content {
     margin-left: 13px;
 }
 
@@ -85,7 +89,14 @@ label {
     color: var(--primary-color);
 }
 
-#u-name, #password, #u-name-su, #password-su, #email, #comment, #bb-content, #b-title {
+#u-name, 
+#password, 
+#u-name-su, 
+#password-su, 
+#email, 
+#comment, 
+#bb-content, 
+#b-title {
     padding: 8px;
     width: 97%;
 }
@@ -99,7 +110,8 @@ label {
     border-radius: 5px;
 }
 
-#login, #sign-up {
+#login, 
+#sign-up {
     padding: 7px;
     width: 1225px;
     background-color: var(--button);

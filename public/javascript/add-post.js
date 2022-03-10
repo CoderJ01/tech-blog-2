@@ -4,10 +4,6 @@ async function newFormHandler(event) {
     const blog_title = document.querySelector('input[name="b-title"]').value.trim();
     const blog_text = document.querySelector('textarea[name="bb-content"]').value.trim();
 
-    console.log('This button works');
-    console.log(blog_title);
-    console.log(blog_text);
-
     if (blog_title && blog_text) {
         const response = await fetch('/api/blogs', {
             method: 'POST',

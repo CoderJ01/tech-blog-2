@@ -8,17 +8,17 @@
         <p>{{blog.blog_text}}</p>
         <br>
         {{#if loggedIn}}
-          <p>Comment<p>
-          <form class="comment-form">
-              <div>
-                  <textarea name="comment-body" id="comment"></textarea>
-              </div>
+        <p>Comment<p>
+        <form class="comment-form">
+            <div>
+                <textarea name="comment-body" id="comment"></textarea>
+            </div>
 
-              <div>
-                  <button type="submit" id="submit-comment">Submit</button>
-              </div>
-              <br>
-          </form>
+            <div>
+                <button type="submit" id="submit-comment">Submit</button>
+            </div>
+            <br>
+        </form>
         {{/if}}
     </div>
 </div>
@@ -30,15 +30,15 @@
 {{!-- display comments --}}
 <div class="comments-list">
   {{#each blog.comments}}
-    <div class="comment-single">
-      <div class="meta">
-        Michaelangelo on {{date}} {{!-- {{comments.user}} --}}
-      </div>
-      <div class="text">
-        {{comment_text}}
-      </div>
-      <br>
+  <div class="comment-single">
+    <div class="meta">
+      Michaelangelo on {{date}} {{!-- {{comments.user}} --}}
     </div>
+    <div class="text">
+    {{comment_text}}
+    </div>
+    <br>
+  </div>
   {{/each}}
 </div>
 

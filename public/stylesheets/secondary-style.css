@@ -54,7 +54,8 @@
     }
 
     .new-blog-form label,
-    .edit-post-form label {
+    .edit-post-form label,
+    .login-form label {
         font-size: 40px;
     }
 
@@ -78,9 +79,14 @@
 
     #b-create, 
     #b-update, 
-    #b-delete {
+    #b-delete,
+    #login {
         font-size: 40px;
         width: 99%;
+    }
+
+    .b-content a {
+        font-size: 30px;
     }
 }
 

@@ -194,7 +194,7 @@
   },
   "scripts": {
     "test": "react-scripts test --env=jsdom",
-    "start": "serve -s build",
+    "start": "node server.js",
     "seed": "node seeds/index.js",
     "dev": "react-scripts start",
     "build": "react-scripts build",

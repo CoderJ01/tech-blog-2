@@ -55,7 +55,8 @@
 
     .new-blog-form label,
     .edit-post-form label,
-    .login-form label {
+    .login-form label, 
+    .signup-form label {
         font-size: 40px;
     }
 

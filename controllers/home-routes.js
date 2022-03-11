@@ -72,10 +72,22 @@ router.get('/blog/:id', (req, res) => {
       // serialize the data
       const blog = dbBlogData.get({ plain: true });
 
+      var onlyName;
+      var userName;
+      
+      if (req.session.username) {
+        userName = JSON.stringify(req.session.username);
+        onlyName = userName.replace(/["]+/g, '');
+      }
+      else {
+        onlyName = '';
+      }
+
       // pass data to template
       res.render('single-post', {
         blog: blog,
-        loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn,
+        displayName: onlyName
       });
     })
     .catch(err => {

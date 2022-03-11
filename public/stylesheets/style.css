@@ -210,6 +210,36 @@ label {
         margin-top: 12px;
         font-size: 35px;
     }
+
+    .mq-comment {
+        font-weight: bold;
+    }
+
+    #u-name, 
+    #password, 
+    #u-name-su, 
+    #password-su, 
+    #email, 
+    #comment, 
+    #bb-content, 
+    #b-title {
+        padding: 25px;
+        font-size: 35px;
+        width: 93%;
+    }
+
+    #submit-comment {
+        font-size: 50px;
+        width: 320px;
+        margin-left: 290px;
+        margin-top: 15px;
+    }
+
+    .meta,
+    .text {
+        font-size: 35px;
+        width: 97%;
+    }
 }
 
 /* iPad  */
@@ -217,6 +247,21 @@ label {
     
     .header-wrapper {
         margin-left: -120px;
+    }
+
+    #u-name, 
+    #password, 
+    #u-name-su, 
+    #password-su, 
+    #email, 
+    #comment, 
+    #bb-content, 
+    #b-title {
+        width: 90%;
+    }
+
+    #submit-comment {
+        margin-left: 175px;
     }
 }
 
@@ -245,6 +290,27 @@ label {
 
     .b-content p {
         font-size: 30px;
+    }
+
+    #u-name, 
+    #password, 
+    #u-name-su, 
+    #password-su, 
+    #email, 
+    #comment, 
+    #bb-content, 
+    #b-title {
+        width: 88%;
+    }
+
+    #submit-comment {
+        margin-left: 100px;
+    }
+
+    .meta,
+    .text {
+        font-size: 30px;
+        width: 140%;
     }
 }
 

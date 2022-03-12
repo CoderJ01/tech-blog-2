@@ -3,11 +3,11 @@ require('dotenv').config();
 
 let sequelize;
 
-if (process.env.JAWSDB_URL) {
-    // create connection to Heroku
-    sequelize = new Sequelize(process.env.JAWSDB_URL);
-} 
-else {
+// if (process.env.JAWSDB_URL) {
+//     // create connection to Heroku
+//     sequelize = new Sequelize(process.env.JAWSDB_URL);
+// } 
+// else {
     // create connection to database
     sequelize = process.env.JAWSDB_URL    
     ? new Sequelize(process.env.JAWSDB_URL)
@@ -16,6 +16,6 @@ else {
         dialect: 'mysql',
         port: 3306
     });
-}
+// }
 
 module.exports = sequelize;

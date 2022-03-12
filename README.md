@@ -27,7 +27,7 @@ This website is designed to allow users to post blogs. When visited for the firs
     * npm i sequelize
 
 ## Website Link
-<!-- insert link here -->
+https://c-tech-blog.herokuapp.com/
 
 ## Contribution
 CoderJ01 

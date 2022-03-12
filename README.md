@@ -6,7 +6,6 @@ This website is designed to allow users to post blogs. When visited for the firs
 ## Built With
     * HTML
     * CSS
-        * materialize
     * JavaScript
         * Node.js
         * Express.js

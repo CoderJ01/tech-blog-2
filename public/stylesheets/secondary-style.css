@@ -81,7 +81,8 @@
     #b-create, 
     #b-update, 
     #b-delete,
-    #login {
+    #login,
+    #sign-up {
         font-size: 40px;
         width: 99%;
     }

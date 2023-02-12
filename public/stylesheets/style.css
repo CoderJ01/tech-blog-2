@@ -156,6 +156,10 @@ label {
     margin-left: 34px;
 }
 
+.comment-single {
+    color: white;
+}
+
 .meta {
     background-color: var(--primary-color);
     color: var(--mint-label);

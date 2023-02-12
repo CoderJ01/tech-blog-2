@@ -2,7 +2,7 @@
 {{#each blog_data as |blog|}}
 <div class="blog-display">
     <div class="b-header">
-        <h2><a href="/blog/{{blog.id}}">{{blog.blog_title}}</a></h2>
+        <h2>{{blog.blog_title}} <a href="/blog/{{blog.id}}">(Link)</a></h2>
         <p>Blog posted by {{user.username}} on {{date}}</p>
     </div>
     <div class="b-content">

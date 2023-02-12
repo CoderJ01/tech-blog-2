@@ -1,8 +1,8 @@
 /* CSS for homepage (mostly) */
 :root {
     --primary-color: rgb(40, 15, 1);
-    --secondary-color: rgb(176, 247, 169);
-    --mint-label: rgb(204, 255, 199);
+    --secondary-color: white;
+    --mint-label: white;
     --button: rgb(77, 86, 86);
 }
 
@@ -12,7 +12,8 @@
 }
 
 body {
-    background-color: var(--secondary-color);
+    background: rgb(96,130,172);
+    background: radial-gradient(circle, rgba(96,130,172,1) 0%, rgba(54,69,79,1) 100%); 
 }
 
 header {
@@ -56,6 +57,10 @@ header h1 {
     margin-top: 20px;
     width: 92%;
     margin-left: 4%;
+}
+
+.blog-display p {
+    color: white;
 }
 
 .b-header p {
